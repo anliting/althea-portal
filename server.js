@@ -1,5 +1,5 @@
 let url=require('url')
-module.exports=althea=>{
+module.exports=function(althea){
     althea.addPagemodule('/portal',pagemodule)
 }
 function pagemodule(env){
