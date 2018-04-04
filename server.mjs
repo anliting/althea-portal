@@ -1,7 +1,4 @@
-let url=require('url')
-module.exports=function(althea){
-    althea.addPagemodule('/portal',pagemodule)
-}
+import url from 'url'
 function pagemodule(env){
     if(!env.althea.allowOrigin(env.envVars,env.request.headers.origin))
         return 403
@@ -24,4 +21,7 @@ function get(env){
         status:303,
         headers:env.headers,
     }
+}
+export default althea=>{
+    althea.addPagemodule('/portal',pagemodule)
 }
